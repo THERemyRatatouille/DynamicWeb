@@ -9,7 +9,18 @@ import {ReactComponent as Heart} from '@material-design-icons/svg/filled/favorit
 
 export default function RecipeCard(){
 
-  
+  const [count, setCount] = useState(0)
+  const handlePlusClick = () => {
+    if (count < 5) {
+      setCount(count + 1)
+    }
+    return
+  }
+  const handleMinusClick = () => {
+    if (count > 0) {
+      setCount(count - 1)
+    }
+  }
 
     return(
     <Card>
